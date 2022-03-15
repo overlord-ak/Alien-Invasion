@@ -1,8 +1,8 @@
 import pygame
 import random
 
-SCREEN_WIDTH = 800
-SCREEN_HEIGHT = 600
+SCREEN_WIDTH = 1000
+SCREEN_HEIGHT = 800
 
 
 class Cloud(pygame.sprite.Sprite):
