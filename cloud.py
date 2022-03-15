@@ -1,5 +1,6 @@
 import pygame
 import random
+import os
 
 SCREEN_WIDTH = 1000
 SCREEN_HEIGHT = 800
@@ -8,7 +9,8 @@ SCREEN_HEIGHT = 800
 class Cloud(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
-        self.surf_image = pygame.image.load("assets\cloud.png")
+        self.surf_image = pygame.image.load(
+            os.path.join('assets', 'cloud.png'))
         self.surf_image = pygame.transform.scale(self.surf_image, (30, 20))
         self.surf = self.surf_image.convert()
         self.surf.set_colorkey((0, 0, 0), pygame.RLEACCEL)

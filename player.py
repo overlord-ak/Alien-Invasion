@@ -1,4 +1,5 @@
 import pygame
+import os
 
 from pygame.locals import (
     RLEACCEL,
@@ -15,7 +16,7 @@ SCREEN_HEIGHT = 800
 class Player(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
-        self.surf_image = pygame.image.load("assets\jet.png")
+        self.surf_image = pygame.image.load(os.path.join('assets', 'jet.png'))
         self.surf_image = pygame.transform.scale(self.surf_image, (50, 20))
         self.surf = self.surf_image.convert()
         self.surf.set_colorkey((255, 255, 255), RLEACCEL)

@@ -10,7 +10,6 @@ from enemy import Enemy
 from player import Player
 from cloud import Cloud
 
-pygame.init()
 
 SCREEN_WIDTH = 1000
 SCREEN_HEIGHT = 800
@@ -35,6 +34,7 @@ running = True
 clock = pygame.time.Clock()
 
 while running:
+    clock.tick(60)
     for event in pygame.event.get():
         if event.type == KEYDOWN:
             if event.key == K_ESCAPE:
@@ -71,8 +71,7 @@ while running:
         player.kill()
         running = False
 
-    pygame.display.flip()
+    pygame.display.update()
 
-    clock.tick(30)
 
 pygame.quit()
