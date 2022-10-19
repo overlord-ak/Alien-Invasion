@@ -7,3 +7,7 @@ The game ends if the user collides with a missile or if the user presses Esc or 
 1. Download the source code
 2. Install pygame using pip
 3. Run game.py
+
+## Tech Stack:
+1. Python
+2. pygame
